@@ -85,7 +85,7 @@ ________________________________________________________________________________
 
 ### For
 
-Itera cada elemento de una lista
+Itera cada elemento de una lista hasta cumplir la condicion
 
     for (variable; condición; incremento){
         ejecuta este código
@@ -103,3 +103,61 @@ Itera cada elemento de una lista
         iterando 2
         iterando 3
 
+### For Of
+
+for of se utiliza sobreobjetos-elementos iterables para el [ arrays, "strings" ] y son estos 2 porque ambos son tomados como una lista de algo. Este ciclo itera cada elemento de una lista dada
+
+    for (variable of objeto){
+        codigo que ejecuta
+    }
+
+    let canasta=["manzana","pera","naranja","uva"];
+    
+    for(fruta of canasta){
+        console.log(fruta);
+    }
+
+### For In
+
+se utiliza para iterar objetos
+
+    for (variable on objetoAiterar){
+        codigo que ejecuta
+    }
+
+    const listaDeCompras={
+        manzana:5,
+        pera:3,
+        naranja:2,
+        uva:1,
+    };
+    
+    for(fruta in listaDeCompras){
+        console.log(fruta);
+    }
+        manzana
+        pera
+        naranja
+        uva
+
+    for(fruta in listaDeCompras){
+        console.log(`${fruta} : ${listaDeCompras[fruta]}`);
+    }
+        manzana : 5
+        pera : 3
+        naranja : 2
+        uva : 1
+
+### Ciclo While
+
+se va a ejecutar siempre y cuando la condicion dada se cumpla. con while se debe poner mucho cuidado porque se puede ejecutar un ciclo infiniito si no se hace bien
+
+    while (condicion){
+        se ejecuta siempre y cuando la consicion se cumpla
+    }
+
+    let contador = 0;
+    while(contador<10){
+        console.log(contador);
+        contador++;   // si no ponemos el incrementador en este caso, entramos en un bucle o siclo infinito pues la condicion siempre se va a cumplir
+    }
