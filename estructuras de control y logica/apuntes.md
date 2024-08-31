@@ -161,3 +161,17 @@ se va a ejecutar siempre y cuando la condicion dada se cumpla. con while se debe
         console.log(contador);
         contador++;   // si no ponemos el incrementador en este caso, entramos en un bucle o siclo infinito pues la condicion siempre se va a cumplir
     }
+
+### Ciclo do While
+
+Primero se ejecuta el codigo antes de validar la condicion
+
+    do {
+        codigo a ejecutar
+    } while ( condicion)
+
+    let contador=0;
+    do {
+        console.log(contador);
+        contador++;
+    } while(contador<10);
