@@ -105,7 +105,7 @@ Itera cada elemento de una lista hasta cumplir la condicion
 
 ### For Of
 
-for of se utiliza sobreobjetos-elementos iterables para el [ arrays, "strings" ] y son estos 2 porque ambos son tomados como una lista de algo. Este ciclo itera cada elemento de una lista dada
+for of se utiliza sobre elementos iterables para el [ arrays, "strings" ] y son estos 2 porque ambos son tomados como una lista de algo. Este ciclo itera cada elemento de una lista dada
 
     for (variable of objeto){
         codigo que ejecuta

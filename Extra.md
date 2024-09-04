@@ -16,3 +16,5 @@ Es una función en JavaScript que se utiliza para convertir una cadena de texto 
     
     const numero = parseInt("42"); Era string lo paso a Numero 
     console.log(numero); // 42
+
+### Object.entries
