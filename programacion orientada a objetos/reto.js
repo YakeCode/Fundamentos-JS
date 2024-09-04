@@ -1,49 +1,77 @@
-const usersDatabase=[
+const usersDatabase = [
     {
-        username:"andres",
-        password:"123",
+        username: "andres",
+        password: "123",
     },
     {
-        username:"caro",
-        password:"456",
+        username: "caro",
+        password: "456",
     },
     {
-        username:"mariana",
-        password:"789",
+        username: "mariana",
+        password: "789",
     },
 ];
 
-const usersTimeline=[
+const usersTimeline = [
     {
-        username:"Estefany",
-        timeline:"Me encata Javascript!",
+        username: "Estefany",
+        timeline: "Me encanta Javascript!",
     },
     {
-        username:"Oscar",
-        timeline:"Bebeloper es lo mejor!",
+        username: "Oscar",
+        timeline: "Bebeloper es lo mejor!",
     },
     {
-        username:"Mariana",
-        timeline:"A mi me gusta mÃ¡s el cafÃ© que el tÃ©",
-    },{
-        username:"Andres",
-        timeline:"Yo hoy no quiero trabajar",
+        username: "Mariana",
+        timeline: "A mí me gusta más el café que el té",
+    },
+    {
+        username: "Andres",
+        timeline: "Yo hoy no quiero trabajar",
     },
 ];
 
 let userName;
 let password;
 
-function usuarioExistente (username, password) {
-    for (let i = i < usersDatabase.length;i ++;){
+userName = 'mariana';
+password = '789';
+
+let usuarioEncontrado;
+
+function usuarioExistente(username, password) {
+    usuarioEncontrado = false;
+    
+    for (let i = 0; i < usersDatabase.length; i++) {
         if (
-            usersDatabase[i].userName === userName && 
+            usersDatabase[i].username === userName && 
             usersDatabase[i].password === password
-        ){
-            console.log ('BIENVENID@')
-        } else {
-            console.log('correo o contraseña incorrectos')
+        ) {
+            console.log('BIENVENID@');
+            usuarioEncontrado = true;
+            break;
         }
     }
+    
+    if (!usuarioEncontrado) {
+        console.log('Correo o contraseña incorrectos');
+    }
+
+    return usuarioEncontrado
 }
+
+usuarioExistente(userName, password);
+
+///////////////////////
+
+
+let signIn = ()=>{
+    if (usuarioEncontrado === true){
+        console.log(`Bienvenido ${userName}`)
+    }
+}
+
+signIn(usuarioEncontrado)
+
 
