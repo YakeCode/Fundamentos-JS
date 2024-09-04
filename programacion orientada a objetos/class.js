@@ -1,3 +1,4 @@
+//Herencia
 class Animal{
     constructor(name,type){
         this.name = name
@@ -36,3 +37,17 @@ console.log(perro1)
 perro1.correr()
 perro1.emitirSonido()
 
+
+//////////////////////// Prototipos
+
+perro1.nuevoMetodo = ()=>{
+    console.log('este es un nuevo metodo') // se agrega solo a la instancia
+}
+
+perro1.prototype.segundoMetodo = ()=>{  // no funciona porque la instancia no tiene prototipo
+    console.log('segundo metodo')
+}
+
+Perro.prototype,segundoMetodo = ()=>{
+    console.log('ingresado de forma correcta')
+}

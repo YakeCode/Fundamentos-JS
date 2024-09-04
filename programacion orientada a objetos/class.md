@@ -94,3 +94,21 @@ class Perro extends Animal{
     }
 }
 
+##### Prototipo en la practica
+
+Para crear una prototipo para una instancia, debemos apuntar directamente a la clase o funcion constructora, pues las instancias no tienen por dentro [[Protpype]]
+
+###### Para agregarlo solo a la instancia especifica
+perro1.nuevoMetodo = ()=>{
+    console.log('este es un nuevo metodo') // se agrega solo a la instancia
+}
+
+###### Para agregarlo a todas las instancias 
+
+perro1.prototype.segundoMetodo = ()=>{  // no funciona porque la instancia no tiene prototipo
+    console.log('segundo metodo')
+}
+
+Perro.prototype,segundoMetodo = ()=>{
+    console.log('ingresado de forma correcta')
+}
