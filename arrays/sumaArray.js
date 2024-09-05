@@ -45,3 +45,18 @@ let numerospares = (num)=>{
 let newNumbers = numbersforfilter.filter(numerospares)
 
 console.log (newNumbers)
+
+const words = ['apple', 'hello', 'bye', 'banana', 'manzana', 'bye', 'hello']
+
+const wordFrecuency = (acomulador, valorActual)=>{
+    if(!acomulador[valorActual] ){
+        acomulador[valorActual] = 1
+    }else {
+        acomulador[valorActual] ++
+    }
+    return acomulador
+}
+
+const repetidas = words.reduce(wordFrecuency,{})
+
+console.log (repetidas)
