@@ -20,3 +20,16 @@
 
     const isArray = Array.isArray('array a validar') -> boolean
 
+## ... Spread Operator
+
+* Copia arrays
+    original [1,2,3,4,5]
+    copia = [...original]
+* Combina arrays
+    arr1 [123]
+    arr2 [abc]
+    combina = [...arr1, ...arr2]
+* Crea arrays con elementos adicionales
+    arr [123]
+    conElementos = [...arr, 'string',number]
+

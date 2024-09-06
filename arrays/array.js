@@ -59,4 +59,19 @@ const wordFrecuency = (acomulador, valorActual)=>{
 
 const repetidas = words.reduce(wordFrecuency,{})
 
-console.log (repetidas)
+console.log (repetidas) 
+
+/////////////////
+
+const numbersforfind = [1,2,3,4,5,6]
+
+let functionfind = (numberfind)=>{
+    return numberfind > 3
+}
+const sigientenumero = numbersforfind.find(functionfind)
+
+console.log(`el numero de find deberia ser 4 y es ${sigientenumero}`)
+
+const indexfind = numbersforfind.findIndex(functionfind)
+
+console.log(`el index de la condicion es [ ${indexfind} ]`)
