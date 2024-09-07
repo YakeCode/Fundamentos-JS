@@ -75,3 +75,5 @@ console.log(`el numero de find deberia ser 4 y es ${sigientenumero}`)
 const indexfind = numbersforfind.findIndex(functionfind)
 
 console.log(`el index de la condicion es [ ${indexfind} ]`)
+
+///////////////////////////

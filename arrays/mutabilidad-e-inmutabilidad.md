@@ -2,10 +2,10 @@
 
 Modifica el array original
 
-Métodos mutables: copyWithin, fill, pop, push, reverse, shift, sort, splice, unshift.
-
 * array.push (ingresar) -> agrega 1 o mas elementos al final de un array 
 * array.pop(borrar) -> Elimina el ultimo elemento de un array
+
+OTROS metodos que modifican el array original son : copyWithin, fill, reverse, shift, sort, splice, unshift.
 
 -----------------------------------------------------------------------------------------------
 
