@@ -51,10 +51,43 @@ Las promesas son lo que va a permitir pasar nuestro codigo de sincrono a asincro
                 console.log(fail);
             });
 
+### fetch()
+
+Es una promesa
+
 -------------------------------------------------------------------------------
 
 ## Async & Await
 
+Async:
+
 genera que el codigo pase de sincrono, a asincrono, la diferencia que tiene con las promesas es que Es una forma mas legible de poder leer los pasos. Async & Await devuelcve una promesa, entonces el resultado es lo mismo
 
-###
+Await : Indica que espera que se resuelva la promesa, en otras palabras pregunta si ya esta listo, si si, procede a continuar con el codigo, sino, espera
+
+### Try y catch
+
+es el que nos va a permitor manejar los errores en el Async y en el await
+
+* Try : codigo que se ejecuta cuando la funcion devuelve true
+* catch : nos va a rregresar el error de lo que no esta funcionando
+
+## For await of
+
+se utiliza cuando tenemos que hacer  mas de una peticion, pues es un bucle que utiliza de fondo un async await de fondo, para poder pasar esas peticiones de fornma asincrona
+
+### ¿Qué hace throw en JavaScript?
+
+El throw es como una forma de decirle a JavaScript: "¡Ocurrió un problema, detén lo que estás haciendo!". Cuando el código encuentra algo inesperado o incorrecto, puedes usar throw para crear un "error" y detener la ejecución normal.
+
+        function divide(a, b) {
+            if (b === 0) {
+                throw new Error("No se puede dividir por cero");
+            }
+            return a / b;
+        }
+
+#### ¿Qué pasa después de throw?
+Cuando JavaScript encuentra throw, deja de ejecutar el código normal y busca un catch que pueda "atrapar" ese error:
+
+---------------------------------------------------------------------------------------

@@ -25,6 +25,7 @@ async function fetchData (){
 fetchData ()
 
 const miPractica = async () => {
+    
     try {
         const api = await fetch('https://jsonplaceholder.typicode.com/todos/1');
         
