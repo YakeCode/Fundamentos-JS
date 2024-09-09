@@ -1,14 +1,3 @@
-/*
-function fetchData (){
-
-    fetch("https://rickandmortyapi.com/api/character") // fetch : hace peticion a la API
-
-        .then((response)=>response.json()) // convertimos los datops en json
-        .then((data)=>console.log(data)) // mostramos los datos ya en json
-        
-        .catch((error)=>console.log(error))
-        
-}*/
 
 async function fetchData (){
     try {
