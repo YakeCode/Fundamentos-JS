@@ -1,31 +1,30 @@
-const listElement = document.querySelector(".posts"); // contenedor de objetos
+const listElement = document.querySelector(".posts");
 const postTemplate = document.getElementById("single-post");
 const form = document.querySelector("#new-post form");
 const fetchButton = document.querySelector("#available-posts button");
 const postList = document.querySelector("#posts-container");
 
-function sendHTTPRequest(metodo, url, data) {
-    return fetch(url, {
-    method: metodo, 
+function sendHTTPRequest(method, url, data) {
+  return fetch(url, {
+    method: method,
     body: JSON.stringify(data),
     headers: {
-        "Content-Type": "application/json",
+      "Content-Type": "application/json",
     },
-    }).then((response) => {
-        return response.json();
-    });
+  }).then((response) => {
+    return response.json();
+  });
 }
 
 async function fecthPosts() {
+  const responseData = await sendHTTPRequest(
+    "GET",
+    "https://jsonplaceholder.typicode.com/posts"
+  );
+  console.log(responseData);
+  const listOfPosts = responseData;
 
-    const responseData = await sendHTTPRequest("GET", "https://jsonplaceholder.typicode.com/posts");
-
-    console.log(responseData);
- /////////////////////////////////////////////////   
-    const listOfPosts = responseData;
-
-    for (const post of listOfPosts) {
-
+  for (const post of listOfPosts) {
     const postContainer = document.createElement("article");
     postContainer.id = post.id;
     postContainer.classList.add("post-item");
@@ -44,28 +43,27 @@ async function fecthPosts() {
     postContainer.append(button);
 
     listElement.append(postContainer);
-    }
+  }
 }
 
 fetchButton.addEventListener("click", fecthPosts);
 
-/*--------------------------------------------------------- */
-
-/*async function createPost(title, content) {
-    const userId = Math.random();
-    const post = {
+async function createPost(title, content) {
+  const userId = Math.random();
+  const post = {
     title: title,
     body: content,
     userId: userId,
-    };
+  };
 
-    sendHTTPRequest("POST", "https://jsonplaceholder.typicode.com/posts", post);
+  sendHTTPRequest("POST", "https://jsonplaceholder.typicode.com/posts", post);
 }
 
 form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const title = event.currentTarget.querySelector("#title").value;
-    const content = event.currentTarget.querySelector("#content").value;
+  event.preventDefault();
+  const title = event.currentTarget.querySelector("#title").value;
+  const content = event.currentTarget.querySelector("#content").value;
 
-    createPost(title, content);
-});*/
+console.log(title, content) 
+  createPost(title, content);
+});

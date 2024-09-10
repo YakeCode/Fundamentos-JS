@@ -40,6 +40,11 @@ DELETE: Se utiliza para eliminar un recurso del servidor, como al eliminar un ar
 
 ## Como funciona HTTP
 
-en la consola del navegador podemos ver como se estan viendo los request, en la parte de inspector de elementops, red o network
+En el inspector de elementos, podemos ver como se estan viendo los request del servidor, esto se puede hacer en el inspector de elementos  en red o network
 
+    Nota :  En la siguiente pagina podemos encontrar cual es cada uno de los estatus de HTTP
+
+        https://http.cat/ 
+
+* Fetch por defecto siempre va hacer una peticion tipo get
 
